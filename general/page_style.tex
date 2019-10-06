@@ -1,0 +1,119 @@
+% !TEX root = ../report.tex
+
+% PDF infos -----------------------------------------------------------------
+\hypersetup{
+  pdftitle={Projektdokumentation},
+  pdfauthor=\authorName,
+  pdftitle={\reportFulltitle},
+  pdfsubject={\oscpSubject},
+  pdfkeywords={OSCP IT-Security Penetration-Testing Exam Report Lab Offensive-Security}
+}
+
+% Margins -----------------------------------------------------------------
+\setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
+\geometry{verbose,tmargin=3cm,bmargin=2.5cm,lmargin=2cm,rmargin=2.8cm,footskip=1cm}
+
+% Chapter style -----------------------------------------------------------------
+\titleformat{\chapter}
+  {\normalfont\Large\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% Page styles -----------------------------------------------------------------
+\setlength{\headheight}{24pt}
+% It necessary to overrid the plain style because \chapte uses it internally
+\fancypagestyle{plain}{%
+  \fancyhead{}
+  \fancyhead[L]{}
+  \fancyhead[C]{\reportFulltitle}
+  \fancyhead[R]{\includegraphics[height=2em]{images/logo.eps}}
+  \fancyfoot{}
+  \fancyfoot[C]{Page \thepage~of~\pageref{subsec:LASTPAGE}}
+}
+\fancypagestyle{roman}{
+  \fancyhead{}
+  \fancyhead[L]{}
+  \fancyhead[C]{\reportFulltitle}
+  \fancyhead[R]{\includegraphics[height=2em]{images/logo.eps}}
+  \fancyfoot{}
+  \fancyfoot[C]{\thepage}
+}
+\fancypagestyle{arabic}{
+  \fancyhead{}
+  \fancyhead[L]{}
+  \fancyhead[C]{\reportFulltitle}
+  \fancyhead[R]{\includegraphics[height=2em]{images/logo.eps}}
+  \fancyfoot{}
+  \fancyfoot[C]{Page \thepage~of~\pageref{subsec:LASTPAGE}}
+}
+\fancypagestyle{appendix}{
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhead{}
+  \fancyfoot{}
+  \fancyfoot[C]{\thepage}
+}
+
+% Code listings - highlighting
+% ------------------------------------------------------------------------------
+
+% XML
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily\small,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\ }{=},
+  stringstyle=\color{blue},
+  identifierstyle=\color{maroon}
+}
+
+% Python 
+\definecolor{Code}{rgb}{0,0,0}
+\definecolor{Decorators}{rgb}{0.5,0.5,0.5}
+\definecolor{Numbers}{rgb}{0.5,0,0}
+\definecolor{MatchingBrackets}{rgb}{0.25,0.5,0.5}
+\definecolor{Keywords}{rgb}{0,0,1}
+\definecolor{self}{rgb}{0,0,0}
+\definecolor{Strings}{rgb}{0,0.63,0}
+\definecolor{Comments}{rgb}{0,0.63,1}
+\definecolor{Backquotes}{rgb}{0,0,0}
+\definecolor{Classname}{rgb}{0,0,0}
+\definecolor{FunctionName}{rgb}{0,0,0}
+\definecolor{Operators}{rgb}{0,0,0}
+\definecolor{Background}{rgb}{0.98,0.98,0.98}
+\lstdefinelanguage{Python}
+{
+  xleftmargin=1em,
+  showspaces=false,
+  showtabs=false,
+  showstringspaces=false,
+  tabsize=4,
+  % Basic
+  basicstyle=\ttfamily\small\setstretch{1},
+  backgroundcolor=\color{Background},
+  % Comments
+  commentstyle=\color{Comments}\slshape,
+  % Strings
+  stringstyle=\color{Strings},
+  morecomment=[s][\color{Strings}]{"""}{"""},
+  morecomment=[s][\color{Strings}]{'''}{'''},
+  % keywords
+  morekeywords={import,from,class,def,for,while,if,is,in,elif,else,not,and,or,print,break,continue,return,True,False,None,access,as,,del,except,exec,finally,global,import,lambda,pass,print,raise,try,assert},
+  keywordstyle={\color{Keywords}\bfseries},
+  % additional keywords
+  morekeywords={[2]@invariant,pylab,numpy,np,scipy},
+  keywordstyle={[2]\color{Decorators}\slshape},
+  emph={self},
+  emphstyle={\color{self}\slshape},
+}
+
+% General
+% ------------------------------------------------------------------------------
+\onehalfspacing
+\frenchspacing
+
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000

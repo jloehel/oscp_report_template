@@ -1,0 +1,83 @@
+% !TEX root = ../methodologies/penetration.tex
+
+% Host attributes -----------------------------------------------------------------
+\renewcommand{\hostname}{192.168.1.1}
+\renewcommand{\os}{Linux}
+\renewcommand{\ip}{192.168.1.1}
+\renewcommand{\tcpports}{21,22,80,443}
+\renewcommand{\udpports}{53}
+\renewcommand{\vuln}{Buffer overflow}
+% \def\root{}
+
+
+\subsection{\hostname}
+\subsubsection{Service Enumeration}
+
+\begin{table}[h]
+	\begin{tabular}{|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{\textbf{\hostname}}\\\hline\hline
+		Type         & Open ports   \\\hline
+		TCP          & \tcpports{}  \\\hline
+		UDP          & \udpports{}  \\\hline\hline
+		\textbf{\os} & \textbf{\ip} \\\hline
+	\end{tabular}
+	\caption{Service enumeration \hostname}
+\end{table}
+
+
+\subsubsection{Remote Access Exploitation}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\paragraph{Vulnerability Exploited:}
+\vuln
+
+\paragraph{Vulnerability Explanation:}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\paragraph{Severity:}
+\textbf{\textcolor{red}{Critical}}
+
+\paragraph{Proof of Concept:}
+\begin{lstlisting}[caption={Exploitation of \hostname}]
+*@Kali prep:@*
+
+*@Modifications in the exploit@*
+PANIC **@PANIC@** PANIC
+*@Running the exploit@*
+
+*@Escaping the low priv shell:@*
+\end{lstlisting}
+
+
+\ifdefined\root
+\subsubsection{Privilege Escalation}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+sea takimata sanctus est Lorem ipsum dolor sit amet.
+\fi
+
+
+\subsubsection{Proof and Post escalation}
+\begin{lstlisting}[caption={Post exploitation of \hostname},label=\hostname-post]
+*@Post exploitation commands run:@*
+\end{lstlisting}

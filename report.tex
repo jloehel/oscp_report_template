@@ -1,0 +1,60 @@
+\documentclass[
+  english,
+]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+
+\input{meta}
+\input{general/packages}
+\input{general/page_style}
+\input{general/commands}
+
+
+\begin{document}
+
+% cover --------------------------------------------------------------------
+\input{cover}
+
+% toc --------------------------------------------------------------------
+\newpage
+\pagenumbering{roman}
+\thispagestyle{roman}
+\listoffigures
+\thispagestyle{roman}
+\newpage
+\listoftables
+\thispagestyle{roman}
+\newpage
+\tableofcontents
+\thispagestyle{roman}
+
+% main ---------------------------------------------------------------------
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{arabic}
+\input{introduction}
+\input{summary}
+\input{methodology}
+\input{conclusion}
+\label{subsec:LASTPAGE}
+
+% bibliography ---------------------------------------------------------------------
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{4}
+\pagestyle{roman}
+\bibliographystyle{references/style/natdin}
+\bibliography{references/oscp}
+\thispagestyle{roman}
+
+
+% appendix ---------------------------------------------------------------------
+\newpage
+\clearpage
+\pagestyle{appendix}
+\input{appendix}
+\thispagestyle{appendix}
+
+\end{document}

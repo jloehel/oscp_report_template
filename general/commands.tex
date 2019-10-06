@@ -1,0 +1,12 @@
+% !TEX root = ../report.tex
+
+% Code snippets
+\newcommand{\snip}[3]
+{\begin{figure}[htb]
+\centering
+\singlespacing
+\lstinputlisting[language=python, firstline=#2, lastline=#3]{Listings/#1}
+\caption{#1}
+\label{#2}
+\end{figure}
+}
