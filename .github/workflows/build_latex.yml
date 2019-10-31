@@ -7,7 +7,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@master
+        uses: dante-ev/latex-action@master
         with:
           root_file: report.tex
-          extra_packages: lastpage fancyhdr
+          extra_packages: lastpage titling
