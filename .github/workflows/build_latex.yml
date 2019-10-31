@@ -10,3 +10,4 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: report.tex
+          extra_packages: lastpage fancyhdr
